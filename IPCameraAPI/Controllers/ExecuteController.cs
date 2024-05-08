@@ -18,7 +18,7 @@ namespace IPCameraAPI.Controllers
         [HttpPost("run")]
         public async Task<IActionResult> Run([FromBody] LoginDto request)
         {
-            var result = await _executeService.Run(request);
+            var result = await _executeService.Run(request, "IPCameraVideos", Guid.NewGuid().ToString(), 9000);
             return StatusCode((int)result.StatusCode, result);
         }
     }

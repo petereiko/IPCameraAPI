@@ -49,7 +49,7 @@ namespace IPCameraAPI.Business.Implementations
             Parallel.ForEach(users, (u) =>
             {
                 string fileName = Guid.NewGuid().ToString() + ".mp4";
-                string directory = $"{baseDirectory}/";
+                string directory = $"C:/{baseDirectory}/";
                 string midPath = $"{u.Email.Replace(".", "")}/";
                 string TotalDirectory = Path.Combine(directory, midPath);
                 if(!Directory.Exists(TotalDirectory))

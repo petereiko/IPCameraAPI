@@ -2,6 +2,10 @@ using FluentValidation;
 using IPCameraAPI.Business.DTOs;
 using IPCameraAPI.Business.Implementations;
 using IPCameraAPI.Business.Interfaces;
+using IPCameraAPI.Business.Modules.Authentication;
+using IPCameraAPI.Business.Modules.Execute;
+using IPCameraAPI.Business.Modules.Record;
+using IPCameraAPI.Business.Modules.Streaming;
 using IPCameraAPI.Business.Validations;
 using IPCameraAPI.Data;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +18,12 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<IAdminUserService, AdminUserService>();
 builder.Services.AddScoped<IValidator<AdminUserDto>, AdminUserDtoValidation>();
 builder.Services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddTransient<IClientRecordService, ClientRecordService>();
+builder.Services.AddTransient<IExecuteService, ExecuteService>();
+builder.Services.AddTransient<IAuthenticationService, AuthenticationService>();
+builder.Services.AddTransient<ICookieStore, CookieStore>();
+builder.Services.AddTransient<IStreamingService, StreamingService>();
+builder.Services.AddTransient<IRecordService, RecordService>(); 
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
