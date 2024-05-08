@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace IPCameraAPI.Business.Interfaces
+{
+    public interface IClientRecordService
+    {
+        Task Execute(string baseDirectory, int videoDuration);
+    }
+}

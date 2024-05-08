@@ -1,0 +1,6 @@
+@IPCameraAPI.ClientApi_HostAddress = http://localhost:5201
+
+GET {{IPCameraAPI.ClientApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

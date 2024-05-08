@@ -1,0 +1,122 @@
+﻿@model IEnumerable<IPCameraAPI.Business.DTOs.SubscriptionPlanDto>
+
+@{
+    ViewData["Title"] = "Plan";
+}
+
+<h1>Plans</h1>
+
+<p>
+    <button type="button" class="btn btn-primary" id="btn-create-modal">Create New</button>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Duration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                Uploaded By
+            </th>
+            <th>
+                status
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Duration)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AdminUser.Email)
+                </td>
+                <td>
+                    @if (item.IsActive)
+                    {
+                        <span style="color:white; background-color:green; border-radius:3px; font-weight:bold; padding:5px; font-size:9px">Active</span>
+                    }
+                    else
+                    {
+                        <span style="color:white; background-color:red; border-radius:3px; font-weight:bold; padding:5px; font-size:9px">Deactivated</span>
+                    }
+                </td>
+                <td>
+                    <button type="button" onclick="ShowEditModal('@item.Id')" class="btn btn-sm btn-success">Edit</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<div id="create-modal" class="modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="create-content"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+
+        const ShowEditModal = (id) => {
+            
+            $.ajax({
+                url: '@Url.Action("EditPlan")?id=' + id,
+                type: 'get',
+                dataType: 'html',
+                success: function (response) {
+                    $('#create-modal').modal('show');
+                    $('#create-content').html(response);
+                },
+                error: function (err) {
+                    alert('Could not load the form');
+                }
+            })
+        }
+
+        $(function () {
+            $('#btn-create-modal').click(function () {
+                
+                $.ajax({
+                    url: '@Url.Action("CreatePlan")',
+                    type: 'get',
+                    dataType: 'html',
+                    success: function (response) {
+                        $('#create-modal').modal('show');
+                        $('#create-content').html(response);
+                    },
+                    error: function (err) {
+                        alert('Could not load the form');
+                    }
+                })
+            })
+
+        })
+    </script>
+}

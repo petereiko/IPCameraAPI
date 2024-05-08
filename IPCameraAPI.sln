@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IPCameraAPI", "IPCameraAPI\IPCameraAPI.csproj", "{85421059-35B5-4B6D-A7DD-2382712DAFFD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IPCameraAPI.Business", "IPCameraAPI.Business\IPCameraAPI.Business.csproj", "{FDAA7538-2A0E-440E-92A7-6B301A4606A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PCameraAPI.ClientAPI", "PCameraAPI.ClientAPI\PCameraAPI.ClientAPI.csproj", "{5BB1B309-61DF-435F-80B6-5307240B8AB1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IPCameraAPI.Data", "IPCameraAPI.Data\IPCameraAPI.Data.csproj", "{2AB79827-4E9F-4F94-9893-3F78E4E703F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPCameraAPI.Admin", "IPCameraAPI.Admin\IPCameraAPI.Admin.csproj", "{4D25224F-DBAA-4449-A515-072394F3BDEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85421059-35B5-4B6D-A7DD-2382712DAFFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85421059-35B5-4B6D-A7DD-2382712DAFFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85421059-35B5-4B6D-A7DD-2382712DAFFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85421059-35B5-4B6D-A7DD-2382712DAFFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDAA7538-2A0E-440E-92A7-6B301A4606A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDAA7538-2A0E-440E-92A7-6B301A4606A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDAA7538-2A0E-440E-92A7-6B301A4606A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDAA7538-2A0E-440E-92A7-6B301A4606A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BB1B309-61DF-435F-80B6-5307240B8AB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BB1B309-61DF-435F-80B6-5307240B8AB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BB1B309-61DF-435F-80B6-5307240B8AB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BB1B309-61DF-435F-80B6-5307240B8AB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AB79827-4E9F-4F94-9893-3F78E4E703F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AB79827-4E9F-4F94-9893-3F78E4E703F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AB79827-4E9F-4F94-9893-3F78E4E703F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AB79827-4E9F-4F94-9893-3F78E4E703F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D25224F-DBAA-4449-A515-072394F3BDEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D25224F-DBAA-4449-A515-072394F3BDEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D25224F-DBAA-4449-A515-072394F3BDEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D25224F-DBAA-4449-A515-072394F3BDEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4DDEF4DD-4CCD-4E3B-91B1-6F243F5DCEB6}
+	EndGlobalSection
+EndGlobal
