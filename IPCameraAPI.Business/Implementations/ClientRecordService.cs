@@ -77,11 +77,9 @@ namespace IPCameraAPI.Business.Implementations
                     EndDate = EndDate
                 };
 
-                _context.VideoRecords.Add(record);
-                lock (_lock)
-                {
-                    _context.SaveChanges();
-                }
+                _context.VideoRecords.AddAsync(record);
+                _context.SaveChangesAsync();
+                
                 
             });
         }
